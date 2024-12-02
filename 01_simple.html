@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        body{
+            font-family: monospace,'Courier New', Courier, sans-serif, ;
+            background: linear-gradient(30deg, rgb(173, 35, 173), rgb(220, 159, 46), rgb(71, 71, 230));
+            color: aliceblue;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          
+           
+        }
+img{
+            height: 250px;
+            width: 100px;
+        }
+        .container{
+            width: 200px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px; /* Added perspective to the container */
+            animation: gallery 20s linear infinite;
+            cursor: pointer;
+            
+        }
+        .container span {
+            align-content: center;
+            position: absolute;
+            top:1% ;
+            right: -110%;
+            transform-origin: center; /* Set transform origin to center */
+            opacity: 0;
+            animation: rotate 20s linear infinite;
+        }
+        .container span:nth-child(1) { animation-delay: 1s; }
+        .container span:nth-child(2) { animation-delay: 2s; }
+        .container span:nth-child(3) { animation-delay: 3s; }
+        .container span:nth-child(4) { animation-delay: 4s; }
+
+
+
+        @keyframes gallery{
+           /* Removed unnecessary keyframes from gallery animation */
+        }@keyframes rotate {
+    0% {
+        transform: rotateY(infinite) translateZ(200px) scale(1); /* Start scaled and back */
+        opacity: 0.5;
+        gap: 2px;
+    }
+    5% { /* Smooth fade-in */
+        transform: rotateY(infinite) translateZ(200px) scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: rotateY(infinite) translateZ(200px) scale(1);
+        opacity: 1;
+    }
+    30% { /* Begin rotation and move forward */
+        transform: rotateY(infinite) translateZ(200px) scale(1);
+        opacity: 1;
+    }
+    45% {  /* Move to front and scale up*/
+      transform: rotateY(infinite) translateZ(200px) scale(1);
+      opacity: 1;
+    }
+    50% { /* Start fade-out*/
+        transform: rotateY(infinite) translateZ(200px) scale(1); 
+        opacity: 1;
+    }
+    55% { /* Complete fade-out */
+        transform: rotateY(infinite) translateZ(200px) scale(1);
+        opacity: 1;
+    }
+    100% { /* Rotate back to beginning position*/
+        transform: rotateY(1500deg) translateZ(200px) scale(1);
+        opacity: 1;
+    }
+}
+.top{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+     text-shadow: 2px 6px 3px red;}
+     header{
+        width: auto;
+        height: 20%;
+        background: rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content:space-between;
+        font-size: larger;
+        color:aliceblue;
+        text-transform: capitalize;
+     }
+     nav,ul,li,a{
+        display: flex;
+        gap: 30px;
+        text-decoration: none;  
+        justify-content: center;
+        align-items:center;
+        color: aliceblue;
+     }
+     #left{
+        justify-content: left;
+        text-align: left;
+     }
+     div{
+        position: absolute;
+        top: 0%;
+        left: 15%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+     }
+   .animate{
+    font-size: 30px;
+   }
+   .cool{
+    background-color: rgba(0, 0, 0, 0.2);
+   }
+    footer{
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0px;
+    margin: 5px;
+    border: 0px solid ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+   }
+   .icons,.img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    font-size: small;
+
+    
+   }
+   picture img:hover{
+    transform: scale(1.5) ;
+   filter: saturate(100%);
+   }
+    </style>
+</head>
+<body>
+    <header>
+     <h1 id="left" class="top animate">prime art</h1>
+    
+        <nav>
+       
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">gallery</a></li>
+                <li><a href="#">team</a></li>
+                <li><a href="#">join us</a></li>
+            </ul>
+       
+    </nav>
+    </header>
+
+    <main class=" cool">
+        <h2 class="top">the way of life</h2>
+        <div class="container" > 
+            <picture >
+         <span style="--i:1"><img src="/images/4.jpg.jpg" alt="not"></span>
+         <span style="--i:2"><img src="/images/one.jpg" alt=""></span>
+         <span style="--i:3"><img src="/images/rr.jpg.jpg" alt=""></span>
+         <span style="--i:4"><img src="/images/two.jpg.jpg" alt=""></span>
+        </picture>
+       
+        </div>
+      
+    </main>
+    <footer >
+        <main class="icons">
+             <a href="https://www.facebook.com/yourprofile"><img class="img" src="/icons/icons/icons8-facebook-48.png" alt=""></a>
+             <a href="https://twitter.com/yourprofile"><img class="img" src="/icons/icons/icons8-twitter-48.png" alt=""></a>
+             <a href="https://www.instagram.com/yourprofile"><img class="img" src="/icons/icons/icons8-instagram-48.png" alt=""></a>
+             <a href=""><img class="img" src="/icons/icons/icons8-whatsapp-48.png" alt=""></a>
+             <a href=""><img class="img" src="/icons/icons/icons8-youtube-48 (1).png" alt=""></a>
+           
+            </main>
+        <p class="copyright">&copy; 2024 Prime art. All rights reserved.</p>
+    </footer>
+</body>
+</html>
